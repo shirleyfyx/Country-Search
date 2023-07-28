@@ -74,17 +74,17 @@ const CountryNames = (props) => {
   )
 
 
-  // if(returnedCountries.length > 10) {
-  //   return (
-  //     <p>Too many matches, specify another filter</p>
-  //   )
-  // }
+  if(returnedCountries.length > 10) {
+    return (
+      <p>Too many matches, specify another filter</p>
+    )
+  }
 
-  // if(returnedCountries.length === 1) {
-  //   return (
-  //    <SingleCountry country = {returnedCountries[0]} />
-  //   )
-  // }
+  if(returnedCountries.length === 1) {
+    return (
+     <SingleCountry country = {returnedCountries[0]} />
+    )
+  }
 
   if( (returnedCountries.length > 1) && (returnedCountries.length < 11) ) {
     return (

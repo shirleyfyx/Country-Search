@@ -20,7 +20,7 @@ const Languages = ({languages}) => {
 
 const Flag = ({flag}) => {
   return (
-    <img src={flag} />
+    <img src={flag} alt = ''/>
   )
 }
 
@@ -28,7 +28,7 @@ const SingleCountry = ({country}) => {
   return (
     <div>
       <h1>{country.name.common}</h1>
-      <p>capital {country.capital}</p>
+      <p>capital {country.capital[0]}</p>
       <p>area {country.area}</p>
       <h2>Languages:</h2>
       <Languages languages={country.languages} />
@@ -37,10 +37,26 @@ const SingleCountry = ({country}) => {
   )
 }
 
+const SingleCountryWithShow = ({country}) => {
+  const [show, setShow] = useState(false)
+
+  const handleClickShow = () => {
+    setShow(!show)
+  }
+
+  return(
+    <li key={country.name.coomon}>
+      {country.name.common}
+      <button onClick={handleClickShow}>show</button>
+      {show ? <SingleCountry country = {country}/> : null}
+    </li>
+  )
+}
+
 const CountryName = (props) => {
   let returnedCountries = props.completeList.filter(country => country.name.common.toLowerCase().includes(props.searchFilter.toLowerCase()))
 
-  if (props.searchFilter.length == 0){
+  if (props.searchFilter.length === 0){
     return (
       <p>Type down the country that you want to learn more about!</p>
     )
@@ -57,16 +73,14 @@ const CountryName = (props) => {
       <ul>
         {returnedCountries.map(country => {
           return(
-            <li key={country.name.common}>
-              <p>{country.name.common}</p>
-            </li>
+            <SingleCountryWithShow country = {country} />
           )
         })}
       </ul>
     )
   }
 
-  if (returnedCountries.length == 1){
+  if (returnedCountries.length === 1){
     return(
       <SingleCountry country = {returnedCountries[0]} />
     )
