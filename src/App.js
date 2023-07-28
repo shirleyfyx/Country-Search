@@ -24,6 +24,32 @@ const Flag = ({flag}) => {
   )
 }
 
+const Weather = ({country}) => {
+  const api_key = process.env.REACT_APP_API_KEY
+  const [weather, setWeather] = useState(null)
+  console.log(api_key)
+  
+  useEffect(() => {
+    axios
+      .get(`https://api.openweathermap.org/data/2.5/weather?lat=${country.latlng[0]}&lon=${country.latlng[1]}&appid=${api_key}`)
+      .then(res => setWeather(res.data))
+      .catch(err => console.error(err))
+  },[country, api_key])
+  if (!weather) {
+    return <p>Loading weather data....</p>
+  }
+  console.log(weather.weather[0].icon)
+  return (
+    <div>
+            <h2>Weather in {country.capital[0]}</h2>
+            <p>weather: {weather.weather[0].description}</p> 
+            <img src = {`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt='' />
+            <p>temperature {Math.round(weather.main.temp - 273.15)} °C</p>
+            <p>wind {weather.wind.speed} m/s</p>
+        </div>
+  )
+}
+
 const SingleCountry = ({country}) => {
   return (
     <div>
@@ -33,6 +59,7 @@ const SingleCountry = ({country}) => {
       <h2>Languages:</h2>
       <Languages languages={country.languages} />
       <Flag flag = {country.flags.png} />
+      <Weather country = {country} />
     </div>
   )
 }
@@ -71,9 +98,9 @@ const CountryName = (props) => {
   if (returnedCountries.length > 1 && returnedCountries.length < 10 ) {
     return(
       <ul>
-        {returnedCountries.map(country => {
+        {returnedCountries.map((country, index) => {
           return(
-            <SingleCountryWithShow country = {country} />
+            <SingleCountryWithShow key = {index} country = {country} />
           )
         })}
       </ul>
@@ -110,6 +137,7 @@ const App = () => {
     axios
       .get('https://restcountries.com/v3.1/all')
       .then(res => setCountries(res.data))
+      .catch(err => console.error(err))
   }, [])
 
   return (
