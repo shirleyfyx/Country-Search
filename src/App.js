@@ -1,6 +1,41 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
+const Languages = ({languages}) => {
+  let keys = Object.keys(languages)
+  return (
+    <ul>
+      {
+        keys.map(key => {
+          return(
+            <li key={key}>
+              {languages[key]}
+            </li>
+          )
+        })
+      }
+    </ul>
+  )
+}
+
+const Flag = ({flag}) => {
+  return (
+    <img src={flag} />
+  )
+}
+
+const SingleCountry = ({country}) => {
+  return (
+    <div>
+      <h1>{country.name.common}</h1>
+      <p>capital {country.capital}</p>
+      <p>area {country.area}</p>
+      <h2>Languages:</h2>
+      <Languages languages={country.languages} />
+      <Flag flag = {country.flags.png} />
+    </div>
+  )
+}
 
 const CountryName = (props) => {
   let returnedCountries = props.completeList.filter(country => country.name.common.toLowerCase().includes(props.searchFilter.toLowerCase()))
@@ -19,15 +54,21 @@ const CountryName = (props) => {
 
   if (returnedCountries.length > 1 && returnedCountries.length < 10 ) {
     return(
-      <div>
+      <ul>
         {returnedCountries.map(country => {
           return(
-            <li>
+            <li key={country.name.common}>
               <p>{country.name.common}</p>
             </li>
           )
         })}
-      </div>
+      </ul>
+    )
+  }
+
+  if (returnedCountries.length == 1){
+    return(
+      <SingleCountry country = {returnedCountries[0]} />
     )
   }
 }
@@ -35,7 +76,7 @@ const CountryName = (props) => {
 const SearchFilter = (props) => {
   return(
     <div>
-        <label htmlFor="search-field">find countries</label>
+        <label htmlFor="search-field">  find countries </label>
         <input id='search-field' value={props.searchField} onChange={props.handleSearchFieldChange} />
       </div>
   )

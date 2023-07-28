@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 const Languages = ({languages}) => {
+  console.log
   let keys = Object.keys(languages)
   return (
     <ul>
@@ -85,17 +86,17 @@ const CountryNames = (props) => {
   //   )
   // }
 
-  // if( (returnedCountries.length > 1) && (returnedCountries.length < 11) ) {
-  //   return (
-  //     <div>
-  //       <ul>
-  //         {returnedCountries.map(country => {return(
-  //           <SingleCountryWithShow country={country} />
-  //         )})}
-  //       </ul>
-  //     </div>
-  //   )
-  // }
+  if( (returnedCountries.length > 1) && (returnedCountries.length < 11) ) {
+    return (
+      <div>
+        <ul>
+          {returnedCountries.map(country => {return(
+            <SingleCountryWithShow country={country} />
+          )})}
+        </ul>
+      </div>
+    )
+  }
 
   // return (
   //   <div>
