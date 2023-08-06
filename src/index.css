@@ -1,13 +1,110 @@
+/* General layout styles */
 body {
+  font-family: 'sans-serif';
+  font-style: italic;
+  background-color: #f9f9cc; /* Light yellow color */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+div, ul, li, h1, h2, p, .note {
+  text-align: center;
+  font-style: italic;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Specific styles for headings, lists, and notes */
+h1 {
+  color: green;
+  font-size: 50px;
+}
+
+h2 {
+  color: #ff5722;
+}
+
+p {
+  font-size: 20px;
+  color: #c66fda;
+}
+
+li {
+  color: rgb(214, 98, 214);
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.note {
+  color: rgb(0, 162, 255);
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+/* Specific styles for weather information */
+.weather-container {
+  display: inline-block;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.weather-container img {
+  max-width: 100px;
+}
+
+/* Style for flag images */
+img {
+  max-width: 300px;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Style for search field */
+#search-field {
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  background-color: #f0f8ff;
+}
+
+/* Style for buttons */
+button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #f9f9cc;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-style: italic;
+}
+
+button:hover {
+  background-color: rgba(0, 128, 0, 0.377);
+}
+
+/* Additional layout styles to handle responsiveness */
+@media only screen and (max-width: 768px) {
+  #search-field {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/* Style for search field */
+#search-field {
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  background-color: #f9f9cc; /* Light yellow color */
+  font-style: italic; /* Italic text style */
+}
+

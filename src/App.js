@@ -74,7 +74,7 @@ const SingleCountryWithShow = ({country}) => {
   return(
     <li key={country.name.coomon}>
       {country.name.common}
-      <button onClick={handleClickShow}>show</button>
+      <button onClick={handleClickShow}> show</button>
       {show ? <SingleCountry country = {country}/> : null}
     </li>
   )
@@ -85,13 +85,13 @@ const CountryName = (props) => {
 
   if (props.searchFilter.length === 0){
     return (
-      <p>Type down the country that you want to learn more about!</p>
+      <p className='note'>Type down the country that you want to learn more about!</p>
     )
   }
 
   if (returnedCountries.length > 10) {
     return (
-         <p>Too many matches, specify another filter</p>
+         <p className='note'>Too many matches, specify another filter</p>
     )
   }
 
@@ -117,7 +117,7 @@ const CountryName = (props) => {
 const SearchFilter = (props) => {
   return(
     <div>
-        <label htmlFor="search-field">  find countries </label>
+        <label htmlFor="search-field" className='note'>  find countries </label>
         <input id='search-field' value={props.searchField} onChange={props.handleSearchFieldChange} />
       </div>
   )
@@ -146,7 +146,6 @@ const App = () => {
       <CountryName searchFilter = {searchField} completeList = {countries} /> 
     </div>
   )
-
 }
 
 export default App;
