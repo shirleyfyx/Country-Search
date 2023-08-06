@@ -35,7 +35,7 @@ p {
 li {
   color: rgb(214, 98, 214);
   padding-top: 20px;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .note {
@@ -60,7 +60,7 @@ li {
 
 /* Style for flag images */
 img {
-  max-width: 300px;
+  max-width: 200px;
   display: block;
   margin: 10px auto;
 }
@@ -108,3 +108,8 @@ button:hover {
   font-style: italic; /* Italic text style */
 }
 
+ .photo{
+  max-width: 1000px;
+  display: block;
+  margin: 10px auto;
+}

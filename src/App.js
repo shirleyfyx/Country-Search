@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import React from 'react';
+import myPhoto from './image/Color_world_map.png'; 
+
 
 const Languages = ({languages}) => {
   let keys = Object.keys(languages)
@@ -85,7 +88,10 @@ const CountryName = (props) => {
 
   if (props.searchFilter.length === 0){
     return (
-      <p className='note'>Type down the country that you want to learn more about!</p>
+      <div>
+        <p className='note'>Type down the country that you want to learn more about!</p>
+        <img src={myPhoto} className="photo" alt="World-map" />
+      </div>
     )
   }
 
