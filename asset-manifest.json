@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Country-Search/static/css/main.0896e359.css",
+    "main.js": "/Country-Search/static/js/main.3efb11bc.js",
+    "static/js/787.6ec67a20.chunk.js": "/Country-Search/static/js/787.6ec67a20.chunk.js",
+    "static/media/Color_world_map.png": "/Country-Search/static/media/Color_world_map.3e26fe68fca857887ff5.png",
+    "index.html": "/Country-Search/index.html",
+    "main.0896e359.css.map": "/Country-Search/static/css/main.0896e359.css.map",
+    "main.3efb11bc.js.map": "/Country-Search/static/js/main.3efb11bc.js.map",
+    "787.6ec67a20.chunk.js.map": "/Country-Search/static/js/787.6ec67a20.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0896e359.css",
+    "static/js/main.3efb11bc.js"
+  ]
+}
