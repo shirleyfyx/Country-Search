@@ -7,7 +7,7 @@ import myPhoto from './image/Color_world_map.png';
 const Languages = ({languages}) => {
   let keys = Object.keys(languages)
   return (
-    <ul>
+    <ul className="language-list"> 
       {
         keys.map(key => {
           return(

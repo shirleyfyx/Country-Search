@@ -24,12 +24,16 @@ h1 {
 }
 
 h2 {
-  color: #0774a6;
+  color: #95d4f2;
 }
 
 p {
   font-size: 20px;
-  color:  rgb(128, 36, 198);
+  color:  rgb(227, 105, 23);
+}
+
+.language-list li {
+  color: rgb(227, 105, 23);  
 }
 
 li {
