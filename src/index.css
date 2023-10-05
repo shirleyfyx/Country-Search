@@ -24,16 +24,16 @@ h1 {
 }
 
 h2 {
-  color: #ff5722;
+  color: #0774a6;
 }
 
 p {
   font-size: 20px;
-  color: #c66fda;
+  color:  rgb(128, 36, 198);
 }
 
 li {
-  color: rgb(214, 98, 214);
+  color:#da6fce;
   padding-top: 20px;
   font-size: 30px;
 }
