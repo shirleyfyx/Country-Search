@@ -1,6 +1,6 @@
 # Country Information App
 
-An interactive React application that allows users to search for country information, view details about a specific country, its flag, and the current weather in its capital.
+An interactive React application allows users to search for country information, and view details about a specific country, its flag, and the current weather in its capital.
 
 ## Features:
 
