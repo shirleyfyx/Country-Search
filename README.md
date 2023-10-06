@@ -12,7 +12,7 @@ An interactive React application allows users to search for country information,
 ### API Used:
 
 Rest Countries API - for fetching country details.
-OpenWeatherMap API - for fetching weather details based on latitude and longitude.
+<p>OpenWeatherMap API - for fetching weather details based on latitude and longitude.
 
 ### Styling:
 
