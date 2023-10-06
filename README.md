@@ -1,4 +1,4 @@
-# Country Information App
+# Country Information App :globe_with_meridians: 
 
 An interactive React application allows users to search for country information, and view details about a specific country, its flag, and the current weather in its capital.
 
@@ -17,3 +17,5 @@ OpenWeatherMap API - for fetching weather details based on latitude and longitud
 ### Styling:
 
 The application uses custom CSS for styling, ensuring a unique look and feel. Specific styles have been applied for the weather information, flag display, and responsiveness.
+
+Please check out the website and learn more about your country: https://shirleyfyx.github.io/Country-Search/
