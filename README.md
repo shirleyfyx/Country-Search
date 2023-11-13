@@ -20,4 +20,4 @@ The application uses custom CSS for styling, ensuring a unique look and feel. Sp
 
 Please check out the website and learn more about your country: [Country-Search](https://shirleyfyx.github.io/Country-Search/)
 
-![image](https://github.com/shirleyfyx/Country-Search/assets/109609935/6cf53d18-3b96-4d6b-945d-f31b9aee4042)
+![image](https://github.com/shirleyfyx/Country-Search/assets/109609935/8d39da79-8793-4dec-acf9-a0598382185f)
